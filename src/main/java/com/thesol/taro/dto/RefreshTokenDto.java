@@ -1,2 +1,8 @@
-package com.thesol.taro.dto;public class RefreshTokenDto {
+package com.thesol.taro.dto;
+
+import lombok.Data;
+
+@Data
+public class RefreshTokenDto {
+    private String refreshToken;
 }

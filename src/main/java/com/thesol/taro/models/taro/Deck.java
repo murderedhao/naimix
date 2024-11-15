@@ -1,4 +1,7 @@
-package com.thesol.taro.models;
+package com.thesol.taro.models.taro;
+
+import com.thesol.taro.models.taro.MajorArcana;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +9,7 @@ import java.util.List;
 
 public class Deck {
     private List<TaroCard> cards = new ArrayList<TaroCard>();
-
+    /*
     public Deck() {
         // Добавление Старших Аркан
         for (MajorArcana major : MajorArcana.values()) {
@@ -26,5 +29,5 @@ public class Deck {
     public TaroCard takeCard() {
         return cards.remove(cards.size() - 1);
     }
-
+*/
 }

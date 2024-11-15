@@ -1,14 +1,14 @@
 package com.thesol.taro.service;
 
-import com.thesol.taro.models.Deck;
-import com.thesol.taro.models.users.HR;
-import com.thesol.taro.models.TaroCard;
+import com.thesol.taro.models.taro.Deck;
+import com.thesol.taro.models.taro.TaroCard;
+import com.thesol.taro.models.users.Company;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DeckService {
-
-    public int makeRask(HR hr) {
+/*
+    public int makeRask(Company company) {
         Deck deck = new Deck();
         TaroCard card1 = deck.takeCard();
         TaroCard card2 = deck.takeCard();
@@ -28,4 +28,6 @@ public class DeckService {
      private int takeCard() {
          // TODO: Придумать баллы за карты
      }
+
+ */
 }

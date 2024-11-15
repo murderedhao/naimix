@@ -1,5 +1,6 @@
-package com.thesol.taro.models;
+package com.thesol.taro.models.taro;
 
+import com.thesol.taro.models.qualities.NecessaryQualities;
 import com.thesol.taro.models.qualities.Qualities;
 import lombok.Getter;
 
