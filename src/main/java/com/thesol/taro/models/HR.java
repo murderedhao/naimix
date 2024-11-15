@@ -1,5 +1,6 @@
 package com.thesol.taro.models;
 
+import com.thesol.taro.models.qualities.Qualities;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,7 @@ public class HR {
 }
 
 // Нужные качества
-enum NecessaryQualities {
+enum NecessaryQualities implements Qualities {
     RISK, // Риск
     OPPORTUNITY, // Открытость к новым возможностям
     CREATION, // Творчество

@@ -1,5 +1,6 @@
 package com.thesol.taro.models;
 
+import com.thesol.taro.models.qualities.Qualities;
 import lombok.Getter;
 
 import java.util.HashSet;
@@ -25,8 +26,8 @@ public class TaroCard {
         this.arcanaType = ArcanaType.MINOR;
     }
 
-    public Set<NecessaryQualities> getNecessaryQualities() {
-        Set<NecessaryQualities> qualities = new HashSet<>();
+    public Set<Qualities> getNecessaryQualities() {
+        Set<Qualities> qualities = new HashSet<>();
         if (arcanaType == ArcanaType.MAJOR) {
             switch (majorArcana) {
                 case FOOL:
@@ -108,6 +109,8 @@ public class TaroCard {
 
 
         }
+
+        return qualities;
     }
 }
 
