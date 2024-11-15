@@ -1,13 +1,13 @@
-import Header from "../../components/Header/Header";
-
+import Header from '../../components/Header/Header'
+import WorkersPage from '../../components/Workers/Workers'
 const Workers = () => {
-  return (
-    <div>
-      {" "}
-      <Header />
-      workers
-    </div>
-  );
-};
+	return (
+		<div>
+			{' '}
+			<Header />
+			<WorkersPage />
+		</div>
+	)
+}
 
-export default Workers;
+export default Workers

@@ -26,7 +26,7 @@ const Login = ({ onOpen, onClose }) => {
 						className='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0c6565] focus:border-[#0c6565] transition duration-200'
 						type='password'
 					></input>
-					<button className='text-black p-2 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black mt-2'>
+					<button className='text-black p-2 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black mt-4'>
 						Войти
 					</button>
 				</div>

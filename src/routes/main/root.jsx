@@ -1,11 +1,12 @@
-import Header from "../../components/Header/Header";
+import Header from '../../components/Header/Header'
+import Main from '../../components/Main/Main'
+const Mainslash = () => {
+	return (
+		<>
+			<Header />
+			<Main />
+		</>
+	)
+}
 
-const Main = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
-};
-
-export default Main;
+export default Mainslash
