@@ -1,0 +1,14 @@
+localhost:8080/api/v1/auth/signIn
+{
+    "name": ,
+    "password":
+}
+
+localhost:8080/api/v1/auth/register
+{
+  "name": "Название компании",
+  "email": "example@company.com",
+  "phone": "+1234567890",
+  "password": "securePassword123",
+  "users": null
+}
