@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CustomCompanyDetailsService implements UserDetailsService {
+public class CustomCompanyService implements UserDetailsService {
     private final CompanyRepository companyRepo;
 
     @Override
