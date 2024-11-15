@@ -31,7 +31,7 @@ const Header = () => {
 						<section>
 							<button
 								href=''
-								className='text-black p-2 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black'
+								className='text-black p-4 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black'
 								onClick={() => setModalActive(true)}
 							>
 								Регистрация
