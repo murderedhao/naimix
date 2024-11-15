@@ -1,4 +1,4 @@
-package com.thesol.taro.models;
+package com.thesol.taro.models.users;
 
 public class Company {
     private Long id;

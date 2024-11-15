@@ -1,4 +1,4 @@
-package com.thesol.taro.models;
+package com.thesol.taro.models.users;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +13,7 @@ public class User {
     private String lastName;
     private LocalDate birthDate;
     private Gender gender;
+    private String role = "ROLE_USER";
 
     // Личные качества
     private byte openness; // Открытость

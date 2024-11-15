@@ -1,7 +1,7 @@
 package com.thesol.taro.service;
 
 import com.thesol.taro.models.Deck;
-import com.thesol.taro.models.HR;
+import com.thesol.taro.models.users.HR;
 import com.thesol.taro.models.TaroCard;
 import org.springframework.stereotype.Service;
 
