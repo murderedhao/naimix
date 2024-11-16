@@ -6,6 +6,8 @@ import store from "./redux/store.js";
 import { Provider } from "react-redux";
 import Compatibility from "./routes/compability/Root.jsx";
 import Workers from "./routes/workers/Root.jsx";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,9 +23,13 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    {" "}
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      {" "}
+      <RouterProvider router={router} />
+    </QueryClientProvider>{" "}
   </Provider>
 );

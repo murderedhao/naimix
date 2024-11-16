@@ -1,13 +1,30 @@
 import axios from "axios";
 
-const url = "https://6245127ed042f081.mokky.dev/enHoroscope";
+// Создаем экземпляр Axios с настройками по умолчанию
+const instance = axios.create({
+  baseURL: "https://jsonplaceholder.typicode.com/users",
+});
 
-async function getHoroscope() {
+// Добавляем токен в заголовки всех запросов
+instance.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token"); // Получаем токен из локального хранилища
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// Пример использования для получения данных
+const getProtectedData = async () => {
   try {
-    return await axios.get(url);
+    const response = await instance.get("/");
+    return response.data;
   } catch (error) {
-    console.error("Error fetching:", error.message);
+    console.error(error.response.data.message || error.message);
   }
-}
+};
 
-export { getHoroscope };
+export default getProtectedData;
