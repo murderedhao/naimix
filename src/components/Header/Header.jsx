@@ -1,8 +1,10 @@
 import { useState } from "react";
+import Login from "../Modal/Login";
 import Modal from "../Modal/Modal";
 
 const Header = () => {
   const [modalActive, setModalActive] = useState(false);
+  const [loginActive, setLoginActive] = useState(false);
   return (
     <>
       <header className="bg-white shadow-md">
@@ -18,20 +20,39 @@ const Header = () => {
 
           {/* Навигация */}
           <nav className="hidden lg:flex space-x-6">
-            <a href="/" className="text-[#0c6565] hover:text-black transition">
-              Набор персонала
+            <a
+              href="/workers"
+              className="text-[#0c6565] hover:text-black transition"
+            >
+              Работники компании
+            </a>
+          </nav>
+          <nav className="hidden lg:flex space-x-6">
+            <a
+              href="/compatibility"
+              className="text-[#0c6565] hover:text-black transition"
+            >
+              Сравнение совместимости
             </a>
           </nav>
 
           {/* Блок с кнопками */}
           <div className="flex items-center space-x-4">
-            <a href="" className="text-[#0c6565] hover:text-black transition">
-              Вход
-            </a>
             <section>
               <button
-                href=""
-                className="text-black p-2 text-sm font-npm i @tanstack/react-query uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black"
+                className="text-black p-4 text-sm font-normal uppercase border border-solid border-[#0c6565] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black"
+                onClick={() => setLoginActive(true)}
+              >
+                Войти
+              </button>
+              <Login
+                onOpen={loginActive}
+                onClose={() => setLoginActive(false)}
+              />
+            </section>
+            <section>
+              <button
+                className="text-black p-4 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black"
                 onClick={() => setModalActive(true)}
               >
                 Регистрация
