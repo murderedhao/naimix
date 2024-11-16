@@ -1,5 +1,6 @@
 package com.thesol.taro.models.users;
 
+import com.thesol.taro.models.image.Image;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +28,9 @@ public class User {
     @ElementCollection(targetClass = Gender.class)
     @Enumerated(EnumType.STRING)
     private Set<Gender> gender;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "image_id", referencedColumnName = "id")
+    private Image profileImage;
 
 
     // Личные качества
