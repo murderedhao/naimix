@@ -35,9 +35,6 @@ public class User {
     private byte leadership; // Лидерство
     private byte teamPlayer; // Командный игрок
 
-    private String professionalSkills; // Професиональные навыки
-    private String motivation; // Мотивация к работе
-    private String preferencesInWorkingWithATeam; // Предпочтения в работе с командой
 
     private int evaluatePersonalQualities() {
         int score = 0;

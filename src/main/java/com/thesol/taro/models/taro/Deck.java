@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Deck {
     private List<TaroCard> cards = new ArrayList<TaroCard>();
-    /*
+
     public Deck() {
         // Добавление Старших Аркан
         for (MajorArcana major : MajorArcana.values()) {
@@ -29,5 +29,5 @@ public class Deck {
     public TaroCard takeCard() {
         return cards.remove(cards.size() - 1);
     }
-*/
+
 }
