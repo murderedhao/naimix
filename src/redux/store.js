@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/counterSlice";
-import { usersApi } from "./todosApi";
-export default configureStore({
+import { goodsApi } from "./goodsApi";
+
+export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    [goodsApi.reducerPath]: goodsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(usersApi.middleware),
+  middleware: (getDefaultMiddlware) =>
+    getDefaultMiddlware().concat(goodsApi.middleware),
 });
+
+export default store;
