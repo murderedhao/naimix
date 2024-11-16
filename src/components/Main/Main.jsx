@@ -1,5 +1,5 @@
 import naimix from '../../assets/naimix.png'
-const Main = () => {
+const Mainslash = () => {
 	return (
 		<>
 			<div className='flex justify-center relative top-20 box-border rounded'>
@@ -9,4 +9,4 @@ const Main = () => {
 	)
 }
 
-export default Main
+export default Mainslash

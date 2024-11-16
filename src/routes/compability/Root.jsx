@@ -1,13 +1,13 @@
-import Header from "../../components/Header/Header";
-
+import CompatibilityPage from '../../components/Compatibility/Compatibility'
+import Header from '../../components/Header/Header'
 const Compatibility = () => {
-  return (
-    <div>
-      {" "}
-      <Header />
-      Compatibility
-    </div>
-  );
-};
+	return (
+		<div>
+			{' '}
+			<Header />
+			<CompatibilityPage />
+		</div>
+	)
+}
 
-export default Compatibility;
+export default Compatibility
