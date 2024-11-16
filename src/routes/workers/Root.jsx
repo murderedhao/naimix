@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Header from "../../components/Header/Header";
 import { useQuery } from "@tanstack/react-query";
 
@@ -40,3 +41,18 @@ const Main = () => {
 };
 
 export default Main;
+=======
+import Header from '../../components/Header/Header'
+import WorkersPage from '../../components/Workers/Workers'
+const Workers = () => {
+	return (
+		<div>
+			{' '}
+			<Header />
+			<WorkersPage />
+		</div>
+	)
+}
+
+export default Workers
+>>>>>>> 27f55c197cd8f8889af21d97b61751db61338505

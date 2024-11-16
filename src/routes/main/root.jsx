@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Header from "../../components/Header/Header";
 import { useState } from "react";
 import axios from "axios";
@@ -53,3 +54,17 @@ const Main = () => {
 };
 
 export default Main;
+=======
+import Header from '../../components/Header/Header'
+import Main from '../../components/Main/Main'
+const Mainslash = () => {
+	return (
+		<>
+			<Header />
+			<Main />
+		</>
+	)
+}
+
+export default Mainslash
+>>>>>>> 27f55c197cd8f8889af21d97b61751db61338505

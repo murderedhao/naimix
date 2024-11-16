@@ -20,8 +20,19 @@ const Header = () => {
 
 					{/* Навигация */}
 					<nav className='hidden lg:flex space-x-6'>
-						<a href='/' className='text-[#0c6565] hover:text-black transition'>
-							Набор персонала
+						<a
+							href='/workers'
+							className='text-[#0c6565] hover:text-black transition'
+						>
+							Работники компании
+						</a>
+					</nav>
+					<nav className='hidden lg:flex space-x-6'>
+						<a
+							href='/compatibility'
+							className='text-[#0c6565] hover:text-black transition'
+						>
+							Сравнение совместимости
 						</a>
 					</nav>
 
