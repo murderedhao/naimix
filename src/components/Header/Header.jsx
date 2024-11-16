@@ -40,7 +40,6 @@ const Header = () => {
 					<div className='flex items-center space-x-4'>
 						<section>
 							<button
-								href=''
 								className='text-black p-4 text-sm font-normal uppercase border border-solid border-[#0c6565] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black'
 								onClick={() => setLoginActive(true)}
 							>
@@ -53,7 +52,6 @@ const Header = () => {
 						</section>
 						<section>
 							<button
-								href=''
 								className='text-black p-4 text-sm font-normal uppercase border border-solid border-[#f15330] rounded-full leading-relaxed transition-colors ease-in-out duration-200 hover:bg-black hover:text-white hover:border-black'
 								onClick={() => setModalActive(true)}
 							>

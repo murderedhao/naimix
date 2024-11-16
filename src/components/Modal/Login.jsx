@@ -4,7 +4,7 @@ const Login = ({ onOpen, onClose }) => {
 	if (!onOpen) return null
 
 	return (
-		<div className='fixed top-0 left-0 w-full h-full bg-black/50 overflow-hidden overflow-y-auto transition-opacity duration-300'>
+		<div className='fixed top-0 left-0 w-full h-full bg-black/50 overflow-hidden overflow-y-auto transition-opacity duration-300 z-[99998]'>
 			<div className='absolute top-0 left-0 w-full h-full flex justify-center items-center'>
 				{/* Кнопка закрытия */}
 				<button
