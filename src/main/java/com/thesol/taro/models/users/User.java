@@ -30,7 +30,7 @@ public class User {
     private Set<Gender> gender;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "image_id", referencedColumnName = "id")
-    private Image profileImage;
+    private Image image;
 
 
     // Личные качества
