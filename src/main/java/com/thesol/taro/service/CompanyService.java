@@ -7,6 +7,8 @@ import com.thesol.taro.repository.CompanyRepository;
 import com.thesol.taro.security.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationServiceException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -42,6 +44,20 @@ public class CompanyService {
             }
         }
         throw new AuthenticationServiceException("Email or password is incorrect");
+    }
+
+    public Company getAuthCompany() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        Company company = null;
+
+        if(auth != null && auth.isAuthenticated()) {
+            String email = auth.getName();
+            Optional<Company> companyOptional = companyRepository.findByEmail(email);
+            company = companyOptional.get();
+            return company;
+        }
+
+        return null;
     }
 
 

@@ -1,5 +1,6 @@
 package com.thesol.taro.models.users;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.thesol.taro.models.image.Image;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,6 +25,7 @@ public class User {
     private String lastName;
     private String email;
     private String phoneNumber;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy")
     private LocalDate birthDate;
     @ElementCollection(targetClass = Gender.class)
     @Enumerated(EnumType.STRING)
