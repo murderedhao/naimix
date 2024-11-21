@@ -33,6 +33,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "image_id", referencedColumnName = "id")
     private Image image;
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
 
 
     // Личные качества
@@ -53,9 +56,5 @@ public class User {
         return score;
     }
 
-}
-
-enum Gender {
-    MALE, FEMALE
 }
 

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -23,6 +24,16 @@ public class Company {
     private String email;
     private String phone;
     private String password;
-    @OneToMany
-    private Set<User> users;
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<User> users = new HashSet<>();
+
+    public void addUser(User user) {
+        users.add(user);
+        user.setCompany(this);
+    }
+
+    public void removeUser(User user) {
+        users.remove(user);
+        user.setCompany(null);
+    }
 }
