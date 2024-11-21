@@ -6,6 +6,7 @@ import com.thesol.taro.models.users.Company;
 import com.thesol.taro.repository.CompanyRepository;
 import com.thesol.taro.security.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,6 +17,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CompanyService {
     private final CompanyRepository companyRepository;
     private final PasswordEncoder passwordEncoder;
@@ -25,6 +27,7 @@ public class CompanyService {
         if(company != null) {
             company.setPassword(passwordEncoder.encode(company.getPassword()));
             companyRepository.save(company);
+            log.info("Company " + company.getName() + " was added");
             return true;
         }
         return false;

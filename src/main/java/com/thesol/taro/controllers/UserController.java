@@ -24,7 +24,6 @@ import java.util.Set;
 @Slf4j
 public class UserController {
     private final CompanyService companyService;
-    private final CompanyRepository companyRepository;
     private final UserService userService;
 
     @PostMapping("/add-user")
