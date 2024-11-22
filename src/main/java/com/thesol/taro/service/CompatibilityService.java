@@ -9,8 +9,6 @@ import java.time.Period;
 @Service
 public class CompatibilityService {
 
-
-
     public double getCompatibility() {
         double score = 0.0;
         // TODO: Доделать метод для высчитывания совместимости (доделать методы вычисления по картам таро)

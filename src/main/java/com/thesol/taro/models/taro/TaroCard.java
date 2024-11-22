@@ -13,6 +13,7 @@ public class TaroCard {
     private MajorArcana majorArcana;
     private Suit suit;
     private MinorArcana minorArcana;
+    private String url;
 
     // Конструктор для старших арканов
     public TaroCard(MajorArcana majorArcana) {
@@ -113,26 +114,58 @@ public class TaroCard {
 
         return qualities;
     }
-}
 
-// Типы арканов
-enum ArcanaType {
-    MAJOR, MINOR
-}
-
-// Старшие арканы
-enum MajorArcana {
-    FOOL, MAGICIAN, HIGH_PRIESTESS, EMPRESS, EMPEROR, HIEROPHANT, LOVERS,
-    CHARIOT, JUSTICE, HERMIT, WHEEL_OF_FORTUNE, STRENGTH, HANGED_MAN,
-    DEATH, TEMPERANCE, DEVIL, TOWER, STAR, MOON, SUN, JUDGEMENT, WORLD
-}
-
-// Масти младших арканов
-enum Suit {
-    CUPS, PENTACLES, SWORDS, WANDS
-}
-
-// Младшие арканы
-enum MinorArcana {
-    ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, PAGE, KNIGHT, QUEEN, KING
+    public String getUrl() {
+        if (arcanaType == ArcanaType.MAJOR) {
+            switch (majorArcana) {
+                case FOOL:
+                    return "/resources/static/fool.jpg";
+                case MAGICIAN:
+                    return "/resources/static/mag.jpg";
+                case HIGH_PRIESTESS:
+                    return "/resources/static/zhrica.jpg";
+                case EMPRESS:
+                    return "/resources/static/impress.jpg";
+                case EMPEROR:
+                    return "/resources/static/imperor.jpg";
+                case HIEROPHANT:
+                    return "/resources/static/hierofant.jpg";
+                case LOVERS:
+                    return "/resources/static/lovers.jpg";
+                case CHARIOT:
+                    return "/resources/static/chariot.jpg";
+                case JUSTICE:
+                    return "/resources/static/justise.jpg";
+                case HERMIT:
+                    return "/resources/static/hermit.jpg";
+                case WHEEL_OF_FORTUNE:
+                    return "/resources/static/fortune.jpg";
+                case STRENGTH:
+                    return "/resources/static/strenghch.jpg";
+                case HANGED_MAN:
+                    return "/resources/static/hanged_men.jpg";
+                case DEATH:
+                    return "/resources/static/death.jpg";
+                case TEMPERANCE:
+                    return "/resources/static/temperam.jpg";
+                case DEVIL:
+                    return "/resources/static/devil.jpg";
+                case TOWER:
+                    return "/resources/static/tower.jpg";
+                case STAR:
+                    return "/resources/static/stare.jpg";
+                case SUN:
+                    return "/resources/static/sun.jpg";
+                case MOON:
+                    return "/resources/static/moon.jpg";
+                case JUDGEMENT:
+                    return "/resources/static/sud.jpg";
+                case WORLD:
+                    return "/resources/static/world.jpg";
+            }
+        } else {
+            // TODO: Доделать ссылки для карт
+        }
+        return "";
+    }
 }

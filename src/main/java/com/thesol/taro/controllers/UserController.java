@@ -3,15 +3,11 @@ package com.thesol.taro.controllers;
 import com.thesol.taro.dto.UserDto;
 import com.thesol.taro.models.users.Company;
 import com.thesol.taro.models.users.User;
-import com.thesol.taro.repository.CompanyRepository;
 import com.thesol.taro.service.CompanyService;
 import com.thesol.taro.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
