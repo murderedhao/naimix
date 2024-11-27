@@ -3,6 +3,7 @@ package com.thesol.taro.controllers;
 import com.thesol.taro.dto.UserDto;
 import com.thesol.taro.models.users.Company;
 import com.thesol.taro.models.users.User;
+import com.thesol.taro.repository.UserRepository;
 import com.thesol.taro.service.CompanyService;
 import com.thesol.taro.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ import java.util.Set;
 public class UserController {
     private final CompanyService companyService;
     private final UserService userService;
+    private final UserRepository userRepository;
 
     @PostMapping("/add-user")
     public ResponseEntity<String> makeNewUser(@RequestBody User user) {
@@ -45,6 +47,13 @@ public class UserController {
             return userDtoSet;
         }
         return null;
+    }
+
+    @DeleteMapping("/delete-user/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        userRepository.deleteById(id);
+        log.info("User with id %d was deleted", id);
+        return ResponseEntity.ok("User with id " + id + " was deleted");
     }
 
 
